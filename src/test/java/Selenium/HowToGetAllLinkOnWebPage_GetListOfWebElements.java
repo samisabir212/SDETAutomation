@@ -12,7 +12,7 @@ public class HowToGetAllLinkOnWebPage_GetListOfWebElements {
 	/**
 	 * this is example shows you how to get a list of webelements.
 	 * This example is getting all the links in a webpage by using the 'a' tag
-	 * @throws InterruptedException 
+	 * Free online resource : https://www.toolsqa.com/selenium-webdriver/find-all-the-links/
 	 */
 	
 	public static void main(String[] args) throws InterruptedException {

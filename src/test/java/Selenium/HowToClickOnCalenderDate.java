@@ -12,10 +12,9 @@ import org.testng.annotations.Test;
 
 public class HowToClickOnCalenderDate {
 	
-	public static void main(String[] args) throws InterruptedException {
-
-		
-	}
+	//Free Online Resource : http://learn-automation.com/handle-calender-in-selenium-webdriver/
+	
+	
 	@Test(enabled = false)
 	public void seleniumpractiseDatePicker1() throws InterruptedException {
 		

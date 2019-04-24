@@ -9,6 +9,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HowToGetAllWindowHandles {
+	
+	
+	/**
+	 * 
+	 *Free online resources :
+	 *http://learn-automation.com/handle-multiple-windows-in-selenium-webdriver/
+	 *https://www.toolsqa.com/selenium-webdriver/handling-multiple-browsers-in-selenium-webdriver/
+	 */
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");

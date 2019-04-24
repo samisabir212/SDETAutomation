@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HowToGetTheTextFromWebElement {
 	
+	//this is simple we just use .getText() of the webelement and we store the text in a string object and do what ever we want do with it.
 	
 	public static void main(String[] args) throws InterruptedException {
 		

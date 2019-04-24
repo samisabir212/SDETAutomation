@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 
 public class HowToClickOnElementUsinJavaScriptExecutor {
 
+	//Free Online Resource : http://learn-automation.com/click-in-selenium-webdriver-using-java-script/
+	
 	private JavascriptExecutor js;
 
 	@Test()

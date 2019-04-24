@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HowToClickOnRadioButton {
 	
+	//free online resource : https://www.toolsqa.com/selenium-webdriver/checkbox-radio-button-operations/
+	
 	public static void main(String[] args) throws InterruptedException {
 		
 		

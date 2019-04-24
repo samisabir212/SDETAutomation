@@ -16,6 +16,8 @@ import org.testng.annotations.Test;
 public class HowToCaptureScreenShot {
 	
 	
+	//free Online Resource : https://www.guru99.com/take-screenshot-selenium-webdriver.html
+	
 	@Test(enabled =true)
 	public void howToScreenShot() throws InterruptedException, IOException {
 		
