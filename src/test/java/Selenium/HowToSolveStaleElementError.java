@@ -85,7 +85,7 @@ public class HowToSolveStaleElementError {
 		driver.get("http://www.expedia.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		WebDriverWait wait = null;
+		WebDriverWait wait = new WebDriverWait(driver, 3);
 		WebElement element = driver.findElement(By.xpath("locator"));
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();//<-- wait until element is clickable
 
@@ -112,7 +112,7 @@ public class HowToSolveStaleElementError {
 		driver.get("http://www.expedia.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		WebDriverWait wait = null;
+		WebDriverWait wait = new WebDriverWait(driver, 3);
 		WebElement element = driver.findElement(By.xpath("locator"));
 		Boolean isElementPresent = wait.until(ExpectedConditions.textToBePresentInElement(element, "text"));//<-- wait until element is clickable
 		System.out.println(isElementPresent);
@@ -143,7 +143,7 @@ public class HowToSolveStaleElementError {
 		driver.get("http://www.expedia.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		WebDriverWait wait = null;
+		WebDriverWait wait = new WebDriverWait(driver, 3);
 		WebElement element = driver.findElement(By.xpath("locator"));
 		wait.until(ExpectedConditions.visibilityOf(element)).click();//<-- wait until the element is visiable then click
 	
