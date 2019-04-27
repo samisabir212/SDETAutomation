@@ -13,20 +13,24 @@ public class HowToSendKeys {
 	/**
 	 * 
 	 * free online resourse : https://www.guru99.com/accessing-forms-in-webdriver.html
+	 * Please 
+	 * @throws InterruptedException 
 	 */
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
+			
 		System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.google.com");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		WebElement searchBox = driver.findElement(By.name("q"));
-		searchBox.sendKeys("albert Einstein");
+		WebElement googleTextField = driver.findElement(By.name("q"));
+		googleTextField.sendKeys("Avengers end game reviews");
+		Thread.sleep(4000);
 		driver.close();
 		driver.quit();
-		
+	
 	}
 
 }
