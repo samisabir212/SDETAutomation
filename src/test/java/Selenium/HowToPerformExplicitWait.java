@@ -19,7 +19,7 @@ public class HowToPerformExplicitWait {
 	public static void main(String[] args) {
 
 		System.setProperty("webdriver.chrome.driver",
-				"/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+				Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://letskodeit.teachable.com/p/practice");
 		driver.manage().window().maximize();

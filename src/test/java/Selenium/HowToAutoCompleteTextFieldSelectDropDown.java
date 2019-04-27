@@ -16,7 +16,7 @@ public class HowToAutoCompleteTextFieldSelectDropDown {
 	public static void main(String[] args) throws InterruptedException {
 		////input[@id='flight-origin-hp-flight']
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.expedia.com/");
 		driver.manage().window().maximize();

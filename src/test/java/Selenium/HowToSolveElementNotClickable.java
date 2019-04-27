@@ -28,7 +28,7 @@ public class HowToSolveElementNotClickable {
 		 */
 
 		System.setProperty("webdriver.chrome.driver",
-				"/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+				Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		driver.get("https://www.freecrm.com/index.html");
@@ -67,7 +67,7 @@ public class HowToSolveElementNotClickable {
 		 */
 
 		System.setProperty("webdriver.chrome.driver",
-				"/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+				Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		driver.get("some url");
 		
@@ -89,7 +89,7 @@ public class HowToSolveElementNotClickable {
 		to invisibilityOfElementLocated for the Overlay to be invisible.
 	 */
 		System.setProperty("webdriver.chrome.driver",
-				"/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+				Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		driver.get("some url");
 		
@@ -108,7 +108,7 @@ public class HowToSolveElementNotClickable {
 	 * use java script executor to click on element
 	 */
 		System.setProperty("webdriver.chrome.driver",
-				"/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+				Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		driver.get("some url");
 		

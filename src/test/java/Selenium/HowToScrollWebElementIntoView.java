@@ -23,7 +23,7 @@ public class HowToScrollWebElementIntoView {
 		
 		
 
-		System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		js = (JavascriptExecutor) driver;
 

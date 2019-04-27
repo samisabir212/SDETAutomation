@@ -18,7 +18,7 @@ public class HowToGetWIndowSizeWithJavaScriptExecutor {
 	@Test(enabled = true)
 	public void testGetWindowSizeWithJavaScriptExecutor() throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		js = (JavascriptExecutor) driver; //cast javascript execotor to webdriver instance object
 		//driver.get("http://www.google.com");

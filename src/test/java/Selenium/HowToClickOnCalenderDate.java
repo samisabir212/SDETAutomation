@@ -18,7 +18,7 @@ public class HowToClickOnCalenderDate {
 	@Test(enabled = false)
 	public void seleniumpractiseDatePicker1() throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://seleniumpractise.blogspot.com/2016/08/how-to-handle-calendar-in-selenium.html");
 		driver.manage().window().maximize();
@@ -53,7 +53,7 @@ public class HowToClickOnCalenderDate {
 	
 	@Test(enabled = true)
 	public void expediaDatePickerTest1() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.expedia.com/");
 		driver.manage().window().maximize();
@@ -89,7 +89,7 @@ public class HowToClickOnCalenderDate {
 		 * 
 		 */
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.expedia.com/");
 		driver.manage().window().maximize();

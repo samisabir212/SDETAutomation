@@ -34,7 +34,7 @@ public class HowToSolveStaleElementError {
 		 * 
 		 */
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.expedia.com/");
 		driver.manage().window().maximize();
@@ -50,7 +50,7 @@ public class HowToSolveStaleElementError {
 		 * solution2 you can use a try catch block within a for loop
 		 */
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.expedia.com/");
 		driver.manage().window().maximize();
@@ -80,7 +80,7 @@ public class HowToSolveStaleElementError {
 		 * Use the method .elementToBeClickable()
 		 */
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.expedia.com/");
 		driver.manage().window().maximize();
@@ -107,7 +107,7 @@ public class HowToSolveStaleElementError {
 		 * 	if true then try and clicking the element
 		 */
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.expedia.com/");
 		driver.manage().window().maximize();
@@ -138,7 +138,7 @@ public class HowToSolveStaleElementError {
 		 * with the element.
 		 */
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.expedia.com/");
 		driver.manage().window().maximize();

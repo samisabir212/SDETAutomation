@@ -24,7 +24,7 @@ public class HowToMouseHoverOverElementUsingActionsClass {
 	@Test(enabled = true)
 	public void testMouseHoverAction1() throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/src/resources/java/Drivers/chromedriver_73");
+		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
 		js = (JavascriptExecutor) driver;
 		driver.get("http://letskodeit.teachable.com/pages/practice");
