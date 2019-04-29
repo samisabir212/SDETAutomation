@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27" started-at="2019-04-27T04:58:10Z" finished-at="2019-04-27T04:58:10Z">
+  <suite name="Default suite" duration-ms="23" started-at="2019-04-29T16:35:10Z" finished-at="2019-04-29T16:35:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27" started-at="2019-04-27T04:58:10Z" finished-at="2019-04-27T04:58:10Z">
-      <class name="Collections.HowToUseArrayList">
-        <test-method status="PASS" signature="ArrayListUsing_GENERICS()[pri:0, instance:Collections.HowToUseArrayList@49993335]" name="ArrayListUsing_GENERICS" duration-ms="13" started-at="2019-04-27T00:58:10Z" finished-at="2019-04-27T00:58:10Z">
+    <test name="Default test" duration-ms="23" started-at="2019-04-29T16:35:10Z" finished-at="2019-04-29T16:35:10Z">
+      <class name="Programs_IQ.Sorting">
+        <test-method status="PASS" signature="bubbleSort()[pri:0, instance:Programs_IQ.Sorting@49993335]" name="bubbleSort" duration-ms="11" started-at="2019-04-29T12:35:10Z" finished-at="2019-04-29T12:35:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ArrayListUsing_GENERICS -->
-      </class> <!-- Collections.HowToUseArrayList -->
+        </test-method> <!-- bubbleSort -->
+      </class> <!-- Programs_IQ.Sorting -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
