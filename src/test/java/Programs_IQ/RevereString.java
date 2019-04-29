@@ -12,7 +12,7 @@ public class RevereString {
 		//reverseStringEasyWay();
 	}
 	
-	@Test(enabled = true, priority = 1)
+	@Test(enabled = true, priority = 2)
 	public void reverseStringTest2() {
 		
 		reverseStringEasyWay();
@@ -25,9 +25,9 @@ public class RevereString {
 		
 		int word_length = word.length(); //14 chars
 		
-		System.out.println(word_length);
-		System.out.println(word_length-1);
-		System.out.println(word.charAt(13));
+//		System.out.println(word_length);
+//		System.out.println(word_length-1);
+//		System.out.println(word.charAt(13));
 		for(int i = word_length-1; i>=0;i--) {//want to start at index 13 but word length has a length of 14. 
 			emptyString = emptyString+word.charAt(i);
 		}

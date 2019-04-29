@@ -14,16 +14,16 @@ public class HowToClearTextField {
 
 		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
 		WebDriver driver = new ChromeDriver();
-		driver.get("http://www.google.com");
+		driver.get("https://stackoverflow.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		WebElement searchBox = driver.findElement(By.name("q"));
-		searchBox.sendKeys("albert Einstein");
-		searchBox.clear();//<----------clear text field
-		Thread.sleep(5000);
+		WebElement searchField = driver.findElement(By.name("q"));
+		searchField.sendKeys("how to send text to field using selenium");
+		Thread.sleep(3000);
+		searchField.clear();
+		Thread.sleep(3000);
 		driver.close();
 		driver.quit();
-		
 		
 	}
 
