@@ -1,4 +1,4 @@
-package SolvingInterviewQuestions;
+package Programs_IQ;
 
 import org.testng.annotations.Test;
 

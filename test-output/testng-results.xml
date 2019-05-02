@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23" started-at="2019-04-29T16:35:10Z" finished-at="2019-04-29T16:35:10Z">
+  <suite name="Default suite" duration-ms="29" started-at="2019-05-02T01:55:54Z" finished-at="2019-05-02T01:55:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23" started-at="2019-04-29T16:35:10Z" finished-at="2019-04-29T16:35:10Z">
-      <class name="Programs_IQ.Sorting">
-        <test-method status="PASS" signature="bubbleSort()[pri:0, instance:Programs_IQ.Sorting@49993335]" name="bubbleSort" duration-ms="11" started-at="2019-04-29T12:35:10Z" finished-at="2019-04-29T12:35:10Z">
+    <test name="Default test" duration-ms="29" started-at="2019-05-02T01:55:54Z" finished-at="2019-05-02T01:55:54Z">
+      <class name="Collections.UsingHashMaps">
+        <test-method status="PASS" signature="hashmap_with_Generics()[pri:0, instance:Collections.UsingHashMaps@49993335]" name="hashmap_with_Generics" duration-ms="14" started-at="2019-05-01T21:55:54Z" finished-at="2019-05-01T21:55:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bubbleSort -->
-      </class> <!-- Programs_IQ.Sorting -->
+        </test-method> <!-- hashmap_with_Generics -->
+      </class> <!-- Collections.UsingHashMaps -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

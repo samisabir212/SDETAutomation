@@ -1,8 +1,9 @@
-package MapInterface;
+package Collections;
 
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.testng.annotations.Test;
@@ -20,8 +21,9 @@ public class UsingHashMaps {
 		    map.put(5,"Rahul");  
 		    map.put(2,"Jai");  
 		    map.put(6,"Amit");  
+		   
 		    //Traversing Map  
-		    Set set=map.entrySet();//Converting to Set so that we can traverse  
+		    Set set = map.entrySet();//Converting to Set so that we can traverse  
 		    Iterator itr=set.iterator();  
 		    while(itr.hasNext()){  
 		        //Converting to Map.Entry so that we can get key and value separately  
@@ -41,7 +43,7 @@ public class UsingHashMaps {
 		  map.put(101,"Vijay");  
 		  map.put(102,"Rahul");  
 		  //Elements can traverse in any order  
-		  for(Map.Entry m:map.entrySet()){  
+		  for(Entry<Integer,String> m:map.entrySet()){  
 		   System.out.println(m.getKey()+" "+m.getValue());  
 		  }  
 	}
