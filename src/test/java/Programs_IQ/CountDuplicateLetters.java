@@ -47,7 +47,6 @@ public class CountDuplicateLetters {
 	       }
 	    }
 
-	    System.out.println("Char Map : "+charMap);
 	    
 	    
 	    

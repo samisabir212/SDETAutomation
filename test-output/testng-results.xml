@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29" started-at="2019-05-02T01:55:54Z" finished-at="2019-05-02T01:55:54Z">
+  <suite name="Default suite" duration-ms="24" started-at="2019-05-02T20:37:28Z" finished-at="2019-05-02T20:37:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29" started-at="2019-05-02T01:55:54Z" finished-at="2019-05-02T01:55:54Z">
-      <class name="Collections.UsingHashMaps">
-        <test-method status="PASS" signature="hashmap_with_Generics()[pri:0, instance:Collections.UsingHashMaps@49993335]" name="hashmap_with_Generics" duration-ms="14" started-at="2019-05-01T21:55:54Z" finished-at="2019-05-01T21:55:54Z">
+    <test name="Default test" duration-ms="24" started-at="2019-05-02T20:37:28Z" finished-at="2019-05-02T20:37:28Z">
+      <class name="Programs_IQ.CountDuplicateLetters">
+        <test-method status="PASS" signature="countDuplicateLetters()[pri:0, instance:Programs_IQ.CountDuplicateLetters@49993335]" name="countDuplicateLetters" duration-ms="11" started-at="2019-05-02T16:37:28Z" finished-at="2019-05-02T16:37:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- hashmap_with_Generics -->
-      </class> <!-- Collections.UsingHashMaps -->
+        </test-method> <!-- countDuplicateLetters -->
+      </class> <!-- Programs_IQ.CountDuplicateLetters -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
