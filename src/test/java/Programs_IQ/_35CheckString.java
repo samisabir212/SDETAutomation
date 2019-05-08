@@ -4,12 +4,12 @@ public class _35CheckString {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String str1 = "peoplntech";
-        String str2 = "people";
+		String str1 = "NinjaTurtles";
+        String str2 = "WhiteNinjaInTheNight";
 
         // The String to check the above two Strings to see
         // if they start with this value (Red).
-        String startStr = "people";
+        String startStr = "Ninja";
 
         // Do either of the first two Strings start with startStr?
         boolean starts1 = str1.startsWith(startStr);

@@ -116,7 +116,7 @@ LinkedList
 LinkedList implements the Collection interface. 
 Linked List is data structure that consists of a set of sequentially linked records called nodes. 
 Each node contains two fields, called links, that are references to the previous and to the next node in the sequence of nodes.
-It can store the duplicate elements. 
+It can store duplicate elements. 
 It maintains the insertion order and is not synchronized. In LinkedList, the manipulation is fast because no shifting is required.
 Consider the following example.
 

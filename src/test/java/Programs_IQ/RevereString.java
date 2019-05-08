@@ -9,7 +9,7 @@ public class RevereString {
 	public void reverseStringTest1() {
 		
 		reverseStringRecommended();
-		//reverseStringEasyWay();
+
 	}
 	
 	@Test(enabled = true, priority = 2)
@@ -17,6 +17,8 @@ public class RevereString {
 		
 		reverseStringEasyWay();
 	}
+	
+	
 	 static void reverseStringRecommended() {
 		
 		String word = "SDETautomation";
@@ -28,8 +30,10 @@ public class RevereString {
 //		System.out.println(word_length);
 //		System.out.println(word_length-1);
 //		System.out.println(word.charAt(13));
-		for(int i = word_length-1; i>=0;i--) {//want to start at index 13 but word length has a length of 14. 
-			emptyString = emptyString+word.charAt(i);
+		for(int i = word_length-1; i>=0 ; i--) {//want to start at index 13 but word length has a length of 14. 
+			
+			emptyString = emptyString+word.charAt(i); //put each char into the empty string until the loop ends
+		
 		}
 		
 		String reversedWord = emptyString;

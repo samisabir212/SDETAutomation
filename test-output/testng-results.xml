@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24" started-at="2019-05-02T20:37:28Z" finished-at="2019-05-02T20:37:28Z">
+  <suite name="Default suite" duration-ms="23" started-at="2019-05-08T23:25:35Z" finished-at="2019-05-08T23:25:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24" started-at="2019-05-02T20:37:28Z" finished-at="2019-05-02T20:37:28Z">
-      <class name="Programs_IQ.CountDuplicateLetters">
-        <test-method status="PASS" signature="countDuplicateLetters()[pri:0, instance:Programs_IQ.CountDuplicateLetters@49993335]" name="countDuplicateLetters" duration-ms="11" started-at="2019-05-02T16:37:28Z" finished-at="2019-05-02T16:37:28Z">
+    <test name="Default test" duration-ms="23" started-at="2019-05-08T23:25:35Z" finished-at="2019-05-08T23:25:35Z">
+      <class name="Programs_IQ.FindDuplicatesInArrayList">
+        <test-method status="PASS" signature="testFindDupsInArrayList()[pri:0, instance:Programs_IQ.FindDuplicatesInArrayList@64bf3bbf]" name="testFindDupsInArrayList" duration-ms="10" started-at="2019-05-08T19:25:35Z" finished-at="2019-05-08T19:25:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- countDuplicateLetters -->
-      </class> <!-- Programs_IQ.CountDuplicateLetters -->
+        </test-method> <!-- testFindDupsInArrayList -->
+      </class> <!-- Programs_IQ.FindDuplicatesInArrayList -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
