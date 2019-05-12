@@ -76,7 +76,7 @@ public class OverviewPage extends BasePage {
 				&& actualAvailableBalance.equalsIgnoreCase(expectedBalance)
 				&& actualTotalBalance.equalsIgnoreCase(expectedBalance)) {
 
-			Status = "Passed";
+			tStatus = "Passed";
 			passedValidationCount++;
 			Logger.log("actualUIbalance :" + actualUIbalance + "vs expected expected Balance : " + expectedBalance
 					+ "Passed", "Registration", "Successful_Registration");
@@ -102,7 +102,7 @@ public class OverviewPage extends BasePage {
 
 				failedValidationCount++;
 				failedValidationMessageList.add(e.getMessage());
-				Status = "Failed";
+				tStatus = "Failed";
 			}
 		}
 

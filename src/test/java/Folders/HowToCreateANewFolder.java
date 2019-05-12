@@ -6,13 +6,16 @@ public class HowToCreateANewFolder {
 
 	public static void main(String[] args) {
 
-		String path = "";
+		String path = "/Users/sami/Desktop/SDETAutomation/";
 		
+		String logFolderPath = createLogFolder(path, "ThisIsALogFolder");
+		
+		System.out.println("Log Folder path : "+logFolderPath);
 	}
 
-	public static String createLogFolder(String path) {
+	public static String createLogFolder(String path,String newFolderName) {
 
-		File dir = new File(path);
+		File dir = new File(path+newFolderName);
 
 		dir.mkdir();
 

@@ -105,11 +105,11 @@ public class RegistrationSteps extends WebDriverManager{
 			System.out.println("passedValidationCount :"+ passedValidationCount);
 			System.out.println("failedValidationCount :"+ failedValidationCount);
 
-			System.out.println(testname + " : " + Status);
+			System.out.println(testname + " : " + tStatus);
 
 			Lib.excelwrite(Constants.runResultsFileName,
 					new Object[] { Lib.getcurrentdate(), Environment, "Parabank", Constants.ACCOUNTSTATUS, "REGISTRATION",
-							testname, Status, totalValidationCount, passedValidationCount, failedValidationCount, "n/a",
+							testname, tStatus, totalValidationCount, passedValidationCount, failedValidationCount, "n/a",
 							"RC-8989", "1.0",failedValidationMessageList.toString()});
 
 		}

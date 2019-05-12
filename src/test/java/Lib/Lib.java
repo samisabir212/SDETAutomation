@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -39,8 +40,6 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.http.Header;
-import org.apache.http.HttpResponse;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -49,6 +48,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.util.NumberToTextConverter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -60,8 +60,9 @@ import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import com.microsoft.schemas.office.visio.x2012.main.CellType;
+
 import Constants.Constants;
-import io.restassured.http.Headers;
 import io.restassured.response.Response;
 
 public class Lib {
@@ -281,15 +282,15 @@ public class Lib {
 		projpath = "/Users/sami/Desktop/Automation/" + testerDirName + "/Parabank/Runs/";
 
 		/// Users/sami/Desktop/Automation/sidrissi/Parabank/Runs
-		File dir = new File(projpath + getcurrentdatefolder() + Constants.Environment);
+		File dir = new File(projpath + getcurrentdateyyMMddHHmm() + Constants.Environment);
 
-		System.out.println("prject path : " + projpath + getcurrentdatefolder() + Constants.Environment);
+		System.out.println("prject path : " + projpath + getcurrentdateyyMMddHHmm() + Constants.Environment);
 		dir.mkdir();
 
 		return dir.getAbsolutePath();
 	}
 
-	public static String getcurrentdatefolder() {
+	public static String getcurrentdateyyMMddHHmm() {
 
 		DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HHmm");
 		Date date = new Date();
@@ -594,19 +595,19 @@ public class Lib {
 			
 	}
 	
-	public static void copyResults_to_Shared_Drive(String W_DrivePath,
-			String W_Destination) {
+	public static void copyResults_to_Shared_Drive(String srcLocation,
+			String srcDestination) {
 
-		System.out.println("Lib.Writepath : " + W_DrivePath);
+		System.out.println("Lib.Writepath : " + srcLocation);
 
-		File srcDir = new File(W_DrivePath);
+		File srcDir = new File(srcLocation);
 
-		File destDir = new File(W_Destination);
+		File destDir = new File(srcDestination);
 
 		try {
 			FileUtils.copyDirectory(srcDir, destDir);
-			System.out.println("successfully copied :" + W_DrivePath);
-			System.out.println("to destination folder : " + W_Destination);
+			System.out.println("successfully copied :" + srcLocation);
+			System.out.println("to destination folder : " + srcDestination);
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -753,7 +754,7 @@ public class Lib {
 
 	public static String CreateResultFolder() throws IOException {
 		String runsFolder = projpath + "DailyExecution\\Runs\\";
-		File dir = new File(runsFolder + getcurrentdatefolder());
+		File dir = new File(runsFolder + getcurrentdateyyMMddHHmm());
 		dir.mkdir();
 		
 		return dir.getAbsolutePath();
@@ -763,7 +764,7 @@ public class Lib {
 
 		String SSPAG_Path = projpath + "DailyExecution\\Runs\\";
 
-		File dir = new File(SSPAG_Path + getcurrentdatefolder());
+		File dir = new File(SSPAG_Path + getcurrentdateyyMMddHHmm());
 
 		dir.mkdir();
 		// System.out.println("hahha "+dir.getCanonicalPath());
@@ -1099,6 +1100,85 @@ public class Lib {
 	}
 
 	
+	public static ArrayList<String> getDataByTestCaseName(String testcaseName,String path) throws IOException{
+	//fileInputStream argument
+	ArrayList<String> a=new ArrayList<String>();
+
+	FileInputStream fis=new FileInputStream(path);
+	XSSFWorkbook workbook=new XSSFWorkbook(fis);
+
+	int sheets=workbook.getNumberOfSheets();
+	for(int i=0;i<sheets;i++)
+	{
+	if(workbook.getSheetName(i).equalsIgnoreCase("testdata"))
+	{
+	XSSFSheet sheet=workbook.getSheetAt(i);
+	//Identify Testcases coloum by scanning the entire 1st row
+
+	Iterator<Row>  rows= sheet.iterator();// sheet is collection of rows
+	Row firstrow= rows.next();
+	Iterator<Cell> ce=firstrow.cellIterator();//row is collection of cells
+	int k=0;
+	int coloumn = 0;
+	while(ce.hasNext())
+	{
+	Cell value=ce.next();
+
+	if(value.getStringCellValue().equalsIgnoreCase("TestCases"))
+	{
+	coloumn=k;
+
+	}
+
+	k++;
+	}
+	System.out.println(coloumn);
+
+	////once coloumn is identified then scan entire testcase coloum to identify purcjhase testcase row
+	while(rows.hasNext())
+	{
+
+	Row r=rows.next();
+
+	if(r.getCell(coloumn).getStringCellValue().equalsIgnoreCase(testcaseName))
+	{
+
+	////after you grab purchase testcase row = pull all the data of that row and feed into test
+
+	Iterator<Cell>  cv=r.cellIterator();
+	while(cv.hasNext())
+	{
+	Cell c= cv.next();
+	int cellTypeString1 =c.CELL_TYPE_STRING;
+	if(cellTypeString1==1)
+	{
+
+	a.add(c.getStringCellValue());
+	}
+	else{
+
+	a.add(NumberToTextConverter.toText(c.getNumericCellValue()));
+
+	}
+	}
+	}
+
+
+	}
+
+
+
+
+
+
+
+
+
+	}
+	}
+	return a;
+
+	}
 	
 	
 

@@ -78,7 +78,7 @@ public class Constants {
 	public static int passedValidationCount;
 	public static int failedValidationCount;
 	
-	public static String Status = null;
+	public static String tStatus = null;
 	public static String comment = null;
 	public static String runResultsFileName = null;
 

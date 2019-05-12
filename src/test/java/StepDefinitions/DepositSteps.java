@@ -102,9 +102,9 @@ public class DepositSteps extends WebDriverManager {
 					
 					
 					if (getTransaction_ResponseMap.get("amount").equalsIgnoreCase(expectedDespositAmount.replace("$", ""))) {
-						Status = "Passed";
+						tStatus = "Passed";
 					} else {
-						Status = "Failed";
+						tStatus = "Failed";
 						Comment = "failed to validate transaction";
 					}
 	
@@ -112,7 +112,7 @@ public class DepositSteps extends WebDriverManager {
 					// write to excel write to log
 					Lib.excelwrite(Constants.runResultsFileName,
 							new Object[] { Lib.getcurrentdate(), Environment, "Parabank", Constants.ACCOUNTSTATUS, "DEPOSIT",
-									testname, Status, "n/a", "n/a", "n/a", "RC-8989", "1.0",  });
+									testname, tStatus, "n/a", "n/a", "n/a", "RC-8989", "1.0",  });
 	
 					driver.close();
 					// driver.quit();

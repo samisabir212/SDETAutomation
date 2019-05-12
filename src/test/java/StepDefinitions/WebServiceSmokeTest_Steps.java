@@ -65,14 +65,14 @@ public class WebServiceSmokeTest_Steps extends WebDriverManager {
 				&&testData.get("zipcode").equalsIgnoreCase("zipcode")
 				&&testData.get("phonenumber").equalsIgnoreCase("ssn")) {
 			
-			Status = "Passed";
+			tStatus = "Passed";
 
 		
 		}else {
-			Status = "Failed";
+			tStatus = "Failed";
 		}
 		
-		System.out.println("call_Login_service :"+Status);
+		System.out.println("call_Login_service :"+tStatus);
 
 		
 		//write to excel
@@ -105,10 +105,10 @@ public class WebServiceSmokeTest_Steps extends WebDriverManager {
 				&&testData.get("zipcode").equalsIgnoreCase("zipcode")
 				&&testData.get("phonenumber").equalsIgnoreCase("ssn")) {
 			
-			Status = "Passed";
+			tStatus = "Passed";
 
 		}else {
-			Status = "Failed";
+			tStatus = "Failed";
 
 		}
 		
@@ -132,12 +132,12 @@ public class WebServiceSmokeTest_Steps extends WebDriverManager {
 			Assert.assertEquals("CHECKING", getAccounts_ResponseMap.get("type"));
 			Assert.assertEquals("515.50", getAccounts_ResponseMap.get("balance"));	
 			
-			Status = "Passed";
-			System.out.println("getaccounts_service_to_get_account_info : "+" : "+Status);
+			tStatus = "Passed";
+			System.out.println("getaccounts_service_to_get_account_info : "+" : "+tStatus);
 		}catch(Exception e) {
 			
-			Status = "Failed";
-			System.out.println("getaccounts_service_to_get_account_info : "+" : "+Status);
+			tStatus = "Failed";
+			System.out.println("getaccounts_service_to_get_account_info : "+" : "+tStatus);
 			System.out.println("Exception : "+e.getMessage());
 
 		}
@@ -146,10 +146,10 @@ public class WebServiceSmokeTest_Steps extends WebDriverManager {
 		
 		if(responseStatusCode==200) {
 			
-			Status = "Passed";
+			tStatus = "Passed";
 
 		}else {
-			Status = "Failed";
+			tStatus = "Failed";
 
 		}
 		
