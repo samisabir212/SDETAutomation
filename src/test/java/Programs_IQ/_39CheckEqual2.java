@@ -8,6 +8,7 @@ public class _39CheckEqual2 {
 		String s2 = "JaYZ";
 		
 		System.out.println(s1.equalsIgnoreCase(s2));
+		System.out.println(s1.equals(s2));
 
 	}
 

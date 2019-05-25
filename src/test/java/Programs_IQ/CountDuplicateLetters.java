@@ -15,10 +15,10 @@ public class CountDuplicateLetters {
 		 * this program is counting how many duplicate letters are in the str String object
 		 * there is 2 p's and 3 e's everything else is just 1
 		 * 
-		 * We are splitting the string into seperate characters  p e o p l e n t e c h and putting it in a array of type char
+		 * We are splitting the string into seperate characters  a 2 p 3 p 4 l 5 e and putting it in a array of type char
 		 */
 		
-	    String str = "apple";
+	    String str = "a2p3p4l5e";
 	    
 	    HashMap<Character, Integer> charMap = new HashMap<Character, Integer>(); //character as key , integer as value
 	    

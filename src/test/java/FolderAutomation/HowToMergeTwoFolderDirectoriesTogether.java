@@ -1,4 +1,4 @@
-package Folders;
+package FolderAutomation;
 
 public class HowToMergeTwoFolderDirectoriesTogether {
 

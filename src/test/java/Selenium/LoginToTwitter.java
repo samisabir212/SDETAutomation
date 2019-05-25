@@ -23,7 +23,7 @@ public class LoginToTwitter {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//div[@class='StaticLoggedOutHomePage-login']//input[@placeholder='Phone, email, or username']")).sendKeys("samisabir22");
-		driver.findElement(By.xpath("//div[@id='doc']/div/div/div[1]/div[1]/form/div[2]/input")).sendKeys("");
+		driver.findElement(By.xpath("//div[@id='doc']/div/div/div[1]/div[1]/form/div[2]/input")).sendKeys("Friday27");
 		driver.findElement(By.xpath("//input[@class='EdgeButton EdgeButton--secondary EdgeButton--medium submit js-submit']")).click();
 
 		driver.findElement(By.xpath("//a[@class='u-textInheritColor js-nav']")).click();

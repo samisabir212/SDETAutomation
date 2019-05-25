@@ -1,4 +1,4 @@
-package StringsPlayGround;
+package Programs_IQ;
 
 public class StringBufferExample1 {
 	

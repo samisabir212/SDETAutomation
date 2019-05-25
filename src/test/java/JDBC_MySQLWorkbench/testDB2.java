@@ -18,8 +18,11 @@ public class testDB2 {
 			if(conn != null) {
 				
 				System.out.println("connection successful");
+			
 			}else {
+			
 				System.out.println("connection unsuccessful");
+			
 			}
 			
 			Statement stmt = conn.createStatement();
@@ -30,7 +33,9 @@ public class testDB2 {
 				
 				System.out.println(queryResponse.getString("first_name"));
 				counter++;
+			
 			}
+			
 			System.out.println("total firstnames : "+ counter);
 			
 		}catch(SQLException e) {

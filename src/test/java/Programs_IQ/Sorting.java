@@ -1,14 +1,46 @@
 package Programs_IQ;
 
-import org.testng.annotations.Test;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class Sorting {
 
 	
-	@Test()
-	public void bubbleSort() {
+	
+	public static void main(String[] args) {
 		
-		doBubbleSort();
+//		doBubbleSort();
+//		String[] array = {"4","2","3","1"};
+//		sortArrayMethod(array);
+		sortingHashMap();
+		
+	}
+	
+	
+	public static void sortArrayMethod(String[] randomArray) {
+		
+		
+		System.out.println("before sorting");
+		for (int i = 0; i < randomArray.length;i++) {
+			String s = randomArray[i];
+			System.out.print(s);
+		}
+		
+		
+		Arrays.sort(randomArray);
+		
+		System.out.println("\nafter sorting");
+		
+		for (int i = 0; i < randomArray.length;i++) {
+			String s = randomArray[i];
+			System.out.print(s);
+		}
 		
 	}
 	
@@ -33,28 +65,79 @@ public class Sorting {
 	                    array[j] = array[i]; //this is a swap again
 	                    array[j] = temp;
 
-	                }else {
-	                	
-	                	System.out.println("array[j] is "+ array[j] );
-	                	System.out.println("array[i] is "+ array[i] );
-
-	                	System.out.println("array[j] is greater than array[i], keep going");
-	                	
-	                	System.out.println("and j is currently : "+j);
 	                }
 	           
 	    		}
 	           
 //	            System.out.println("after: --- " + i + "---iteration");
 //	           
-//	            for (int n = 0; n<array.length;n++) {
-//	                System.out.println(array[n] + ",");
-//
-//	            }
-//
-//	            System.out.println("\n");
+	            for (int n = 0; n<array.length;n++) {
+	                System.out.println(array[n] + ",");
+
+	            }
+
+	            System.out.println("\n");
 	        }
 
 	    }
 
+	
+	 
+	 public static void sortingHashMap() {
+		 
+		 Map<String,Integer> map = new HashMap<String,Integer>();
+		 
+		 map.put("one", 1);
+		 map.put("eight", 8);
+		 map.put("nine", 9);
+		 map.put("two", 2);
+		 map.put("three", 3);
+		 map.put("five", 5);
+		 map.put("seven", 7);
+		 map.put("ten", 10);
+		 map.put("six", 6);
+		 map.put("four", 4);
+
+		 //
+		 List<Entry<String,Integer>> list = new LinkedList<Entry<String,Integer>>(map.entrySet());
+		 
+		 //sort by value
+		 Collections.sort(list, new Comparator<Entry<String,Integer>>() {
+
+			@Override
+			public int compare(Entry<String, Integer> o1, Entry<String, Integer> o2) {
+				return o1.getValue().compareTo(o2.getValue()); 
+			}
+			
+		});
+
+		 System.out.println("Sorting by value");
+		 for(Entry<String,Integer> item : list) {
+			 System.out.println(item);
+		 }
+		 
+		 
+		//sort by key
+		 Collections.sort(list, new Comparator<Entry<String,Integer>>() {
+
+			@Override
+			public int compare(Entry<String, Integer> o1, Entry<String, Integer> o2) {
+				return o1.getKey().compareTo(o2.getKey()); 
+			}
+			
+		});
+		 
+		 System.out.println("\n");
+		 
+		 System.out.println("Sorting by key");
+
+		 for(Entry<String,Integer> item : list) {
+			 System.out.println(item);
+		 }
+
+		 
+	 }
+	 
+	 
+	 
 }
