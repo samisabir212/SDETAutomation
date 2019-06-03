@@ -15,8 +15,9 @@ import org.testng.annotations.Test;
 
 public class HowToAutoCompleteTextFieldSelectDropDown {
 
-	//free Online resource : http://total-qa.com/auto-suggestion-auto-complete-text-box-visibilityofallelementslocatedby-example/
-	
+	// free Online resource :
+	// http://total-qa.com/auto-suggestion-auto-complete-text-box-visibilityofallelementslocatedby-example/
+
 	WebDriver driver;
 	WebDriverWait wait;
 
@@ -34,54 +35,51 @@ public class HowToAutoCompleteTextFieldSelectDropDown {
 	@Test
 	public void rightClickTest() {
 		driver.navigate().to(URL);
-		WebElement frameElement=driver.findElement(frameLocator);
+		WebElement frameElement = driver.findElement(frameLocator);
 		driver.switchTo().frame(frameElement);
 		wait.until(ExpectedConditions.presenceOfElementLocated(tagText));
 		WebElement textBoxElement = driver.findElement(tagText);
 		textBoxElement.sendKeys("a");
 		selectOptionWithText("Java");
-		//selectOptionWithIndex(2);
-		
+		// selectOptionWithIndex(2);
+
 	}
-	
+
 	public void selectOptionWithText(String textToSelect) {
 		try {
 			WebElement autoOptions = driver.findElement(By.id("ui-id-1"));
 			wait.until(ExpectedConditions.visibilityOf(autoOptions));
 
 			List<WebElement> optionsToSelect = autoOptions.findElements(By.tagName("li"));
-			for(WebElement option : optionsToSelect){
-		        if(option.getText().equals(textToSelect)) {
-		        	System.out.println("Trying to select: "+textToSelect);
-		            option.click();
-		            break;
-		        }
-		    }
-			
+			for (WebElement option : optionsToSelect) {
+				if (option.getText().equals(textToSelect)) {
+					System.out.println("Trying to select: " + textToSelect);
+					option.click();
+					break;
+				}
+			}
+
 		} catch (NoSuchElementException e) {
 			System.out.println(e.getStackTrace());
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 			System.out.println(e.getStackTrace());
 		}
 	}
-	
-public void selectOptionWithIndex(int indexToSelect) {
-		
+
+	public void selectOptionWithIndex(int indexToSelect) {
+
 		try {
 			WebElement autoOptions = driver.findElement(By.id("ui-id-1"));
 			wait.until(ExpectedConditions.visibilityOf(autoOptions));
 
 			List<WebElement> optionsToSelect = autoOptions.findElements(By.tagName("li"));
-		        if(indexToSelect<=optionsToSelect.size()) {
-		        	System.out.println("Trying to select based on index: "+indexToSelect);
-		           optionsToSelect.get(indexToSelect).click();
-		        }
-		} 		
-		catch (NoSuchElementException e) {
+			if (indexToSelect <= optionsToSelect.size()) {
+				System.out.println("Trying to select based on index: " + indexToSelect);
+				optionsToSelect.get(indexToSelect).click();
+			}
+		} catch (NoSuchElementException e) {
 			System.out.println(e.getStackTrace());
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 			System.out.println(e.getStackTrace());
 		}
 	}
@@ -91,5 +89,4 @@ public void selectOptionWithIndex(int indexToSelect) {
 		driver.quit();
 	}
 
-	
 }
