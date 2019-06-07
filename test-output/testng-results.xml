@@ -1,11 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="0" passed="0">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5" started-at="2019-05-22T04:27:19Z" finished-at="2019-05-22T04:27:19Z">
+  <suite name="Default suite" duration-ms="2330" started-at="2019-06-03T07:10:39Z" finished-at="2019-06-03T07:10:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5" started-at="2019-05-22T04:27:19Z" finished-at="2019-05-22T04:27:19Z">
+    <test name="Default test" duration-ms="2330" started-at="2019-06-03T07:10:39Z" finished-at="2019-06-03T07:10:41Z">
+      <class name="TestNG.DataProvider_Test">
+        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="beforeTestMethod" is-config="true" duration-ms="6" started-at="2019-06-03T03:10:39Z" finished-at="2019-06-03T03:10:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestMethod -->
+        <test-method status="PASS" signature="createEmployees3TimesUsingDataProvider(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="createEmployees3TimesUsingDataProvider" duration-ms="1716" started-at="2019-06-03T03:10:39Z" data-provider="employeeData_DataProvider" finished-at="2019-06-03T03:10:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sami sabir]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[500000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[29]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createEmployees3TimesUsingDataProvider -->
+        <test-method status="PASS" signature="afterTestMethod()[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="afterTestMethod" is-config="true" duration-ms="1" started-at="2019-06-03T03:10:40Z" finished-at="2019-06-03T03:10:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestMethod -->
+        <test-method status="PASS" signature="createEmployees3TimesUsingDataProvider(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="createEmployees3TimesUsingDataProvider" duration-ms="310" started-at="2019-06-03T03:10:40Z" data-provider="employeeData_DataProvider" finished-at="2019-06-03T03:10:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jon Jones Bones]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1000000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[29]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createEmployees3TimesUsingDataProvider -->
+        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="beforeTestMethod" is-config="true" duration-ms="0" started-at="2019-06-03T03:10:40Z" finished-at="2019-06-03T03:10:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestMethod -->
+        <test-method status="PASS" signature="afterTestMethod()[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="afterTestMethod" is-config="true" duration-ms="1" started-at="2019-06-03T03:10:41Z" finished-at="2019-06-03T03:10:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestMethod -->
+        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="beforeTestMethod" is-config="true" duration-ms="0" started-at="2019-06-03T03:10:41Z" finished-at="2019-06-03T03:10:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestMethod -->
+        <test-method status="PASS" signature="createEmployees3TimesUsingDataProvider(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="createEmployees3TimesUsingDataProvider" duration-ms="276" started-at="2019-06-03T03:10:41Z" data-provider="employeeData_DataProvider" finished-at="2019-06-03T03:10:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Elon musk]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[50000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[45]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createEmployees3TimesUsingDataProvider -->
+        <test-method status="PASS" signature="afterTestMethod()[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="afterTestMethod" is-config="true" duration-ms="0" started-at="2019-06-03T03:10:41Z" finished-at="2019-06-03T03:10:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestMethod -->
+      </class> <!-- TestNG.DataProvider_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
