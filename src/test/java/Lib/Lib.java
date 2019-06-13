@@ -939,13 +939,12 @@ public class Lib {
 		return result;
 	}
 
-	public static XSSFSheet createnewsheet() {
-		final String FILE_NAME = System.getProperty("jenkins.Filepath");
+	public static XSSFSheet createNewExcelWithNewSheet(String filePath,String sheetname) {
 		XSSFWorkbook workbook = new XSSFWorkbook();
-		XSSFSheet sheet = workbook.createSheet("Result");
+		XSSFSheet sheet = workbook.createSheet(sheetname);
 
 		try {
-			FileOutputStream outputStream = new FileOutputStream(FILE_NAME);
+			FileOutputStream outputStream = new FileOutputStream(filePath);
 			workbook.write(outputStream);
 			workbook.close();
 		} catch (FileNotFoundException e) {
@@ -1100,6 +1099,10 @@ public class Lib {
 	}
 
 	
+	/**
+	 * Rahul Sheety code
+	 * refer to udemy class on getting test data based on testname
+	 */
 	public static ArrayList<String> getDataByTestCaseName(String testcaseName,String path) throws IOException{
 	//fileInputStream argument
 	ArrayList<String> a=new ArrayList<String>();

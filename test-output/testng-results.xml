@@ -1,100 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2330" started-at="2019-06-03T07:10:39Z" finished-at="2019-06-03T07:10:41Z">
+  <suite name="Default suite" duration-ms="479" started-at="2019-06-12T21:57:52Z" finished-at="2019-06-12T21:57:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2330" started-at="2019-06-03T07:10:39Z" finished-at="2019-06-03T07:10:41Z">
-      <class name="TestNG.DataProvider_Test">
-        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="beforeTestMethod" is-config="true" duration-ms="6" started-at="2019-06-03T03:10:39Z" finished-at="2019-06-03T03:10:39Z">
+    <test name="Default test" duration-ms="479" started-at="2019-06-12T21:57:52Z" finished-at="2019-06-12T21:57:53Z">
+      <class name="ExtentReport.testExtentReportertestNG">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:ExtentReport.testExtentReportertestNG@10bbd20a]" name="beforeSuite" is-config="true" duration-ms="91" started-at="2019-06-12T17:57:52Z" finished-at="2019-06-12T17:57:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTestMethod -->
-        <test-method status="PASS" signature="createEmployees3TimesUsingDataProvider(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="createEmployees3TimesUsingDataProvider" duration-ms="1716" started-at="2019-06-03T03:10:39Z" data-provider="employeeData_DataProvider" finished-at="2019-06-03T03:10:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sami sabir]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[500000]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[29]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="testExtent()[pri:0, instance:ExtentReport.testExtentReportertestNG@10bbd20a]" name="testExtent" duration-ms="465" started-at="2019-06-12T17:57:52Z" finished-at="2019-06-12T17:57:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createEmployees3TimesUsingDataProvider -->
-        <test-method status="PASS" signature="afterTestMethod()[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="afterTestMethod" is-config="true" duration-ms="1" started-at="2019-06-03T03:10:40Z" finished-at="2019-06-03T03:10:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTestMethod -->
-        <test-method status="PASS" signature="createEmployees3TimesUsingDataProvider(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="createEmployees3TimesUsingDataProvider" duration-ms="310" started-at="2019-06-03T03:10:40Z" data-provider="employeeData_DataProvider" finished-at="2019-06-03T03:10:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Jon Jones Bones]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1000000]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[29]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createEmployees3TimesUsingDataProvider -->
-        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="beforeTestMethod" is-config="true" duration-ms="0" started-at="2019-06-03T03:10:40Z" finished-at="2019-06-03T03:10:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTestMethod -->
-        <test-method status="PASS" signature="afterTestMethod()[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="afterTestMethod" is-config="true" duration-ms="1" started-at="2019-06-03T03:10:41Z" finished-at="2019-06-03T03:10:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTestMethod -->
-        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="beforeTestMethod" is-config="true" duration-ms="0" started-at="2019-06-03T03:10:41Z" finished-at="2019-06-03T03:10:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTestMethod -->
-        <test-method status="PASS" signature="createEmployees3TimesUsingDataProvider(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="createEmployees3TimesUsingDataProvider" duration-ms="276" started-at="2019-06-03T03:10:41Z" data-provider="employeeData_DataProvider" finished-at="2019-06-03T03:10:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Elon musk]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[50000]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[45]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createEmployees3TimesUsingDataProvider -->
-        <test-method status="PASS" signature="afterTestMethod()[pri:0, instance:TestNG.DataProvider_Test@5f282abb]" name="afterTestMethod" is-config="true" duration-ms="0" started-at="2019-06-03T03:10:41Z" finished-at="2019-06-03T03:10:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTestMethod -->
-      </class> <!-- TestNG.DataProvider_Test -->
+        </test-method> <!-- testExtent -->
+      </class> <!-- ExtentReport.testExtentReportertestNG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
