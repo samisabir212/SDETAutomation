@@ -10,6 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class HowToMouseHoverOverElementUsingActionsClass {
 	
 
@@ -24,8 +26,8 @@ public class HowToMouseHoverOverElementUsingActionsClass {
 	@Test(enabled = true)
 	public void testMouseHoverAction1() throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
-		WebDriver driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver= new ChromeDriver();
 		js = (JavascriptExecutor) driver;
 		driver.get("http://letskodeit.teachable.com/pages/practice");
 		driver.manage().window().maximize();

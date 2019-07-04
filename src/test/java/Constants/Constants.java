@@ -18,15 +18,11 @@ import io.restassured.specification.RequestSpecification;
 public class Constants {
 	
 	
+	public static HashMap<String,Integer>resultsMap = new HashMap<String,Integer>();
 	public static String rcTicket = null;
 	public static String releaseNumber = null;
 	public static String companyUsername = null;
 	public static String PARABANK_RESULTS_LOG_FOLDER_PATH = null;
-	public final static String REGISTER_URI = "/parabank/register.htm";
-	public final static String GETCUSTOMER_URI = "/parabank/register.htm";
-	public final static String TRANSFERFUNDS_URI = "/parabank/register.htm";
-	public final static String DEPOSIT_URI = "/parabank/register.htm";
-	public final static String WITHDRAW_URI = "/parabank/register.htm";
 	public static String COMMENT = null;
 	public static String requestBody= null;
 	public static String RELEASE_NUMBER = null;

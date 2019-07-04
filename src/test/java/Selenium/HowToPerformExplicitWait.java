@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class HowToPerformExplicitWait {
 	
 	/**
@@ -18,9 +20,8 @@ public class HowToPerformExplicitWait {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.chrome.driver",
-				Constants.chromeDriverPath);
-		WebDriver driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver= new ChromeDriver();
 		driver.get("https://letskodeit.teachable.com/p/practice");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

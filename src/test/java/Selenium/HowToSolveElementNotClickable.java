@@ -12,6 +12,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class HowToSolveElementNotClickable {
 
 	@Test(enabled = true)
@@ -27,9 +29,8 @@ public class HowToSolveElementNotClickable {
 		 * Use JavaScriptExecutor
 		 */
 
-		System.setProperty("webdriver.chrome.driver",
-				Constants.chromeDriverPath);
-		WebDriver driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver= new ChromeDriver();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		driver.get("https://www.freecrm.com/index.html");
 		driver.manage().window().maximize();

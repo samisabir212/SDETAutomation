@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class HowToHandlePopUp {
 	
 	
@@ -17,8 +19,8 @@ public class HowToHandlePopUp {
 	
 	@Test(enabled = false)
 	public void testAlertAcceptPopUp() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
-		WebDriver driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver= new ChromeDriver();
 		driver.get("http://letskodeit.teachable.com/pages/practice");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -34,8 +36,8 @@ public class HowToHandlePopUp {
 	
 	@Test(enabled = true)
 	public void testAlertDismissPopUp() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
-		WebDriver driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver= new ChromeDriver();
 		driver.get("http://letskodeit.teachable.com/pages/practice");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

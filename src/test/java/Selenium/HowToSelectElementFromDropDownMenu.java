@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class HowToSelectElementFromDropDownMenu {
 	
 	
@@ -20,8 +22,8 @@ public class HowToSelectElementFromDropDownMenu {
 	public static void main(String[] args) throws InterruptedException {
 		
 		
-		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
-		WebDriver driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver= new ChromeDriver();
 		driver.get("https://letskodeit.teachable.com/p/practice");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

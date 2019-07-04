@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class HowToClickOnRadioButton {
 	
 	//free online resource : https://www.toolsqa.com/selenium-webdriver/checkbox-radio-button-operations/
@@ -14,8 +16,8 @@ public class HowToClickOnRadioButton {
 	public static void main(String[] args) throws InterruptedException {
 		
 		
-		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
-		WebDriver driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver= new ChromeDriver();
 		driver.get("https://learn.letskodeit.com/p/practice");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

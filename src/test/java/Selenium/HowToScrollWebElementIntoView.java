@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class HowToScrollWebElementIntoView {
 	
 	/**
@@ -23,8 +25,8 @@ public class HowToScrollWebElementIntoView {
 		
 		
 
-		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
-		WebDriver driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver= new ChromeDriver();
 		js = (JavascriptExecutor) driver;
 
 		//driver.get("http://www.expedia.com/");

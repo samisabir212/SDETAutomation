@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"
+	xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/1999/XMLSchema">
+	<s:Body>
+		<x:FlickrResponse xmlns:x="urn:flickr">&lt;brands&gt; &lt;brand
+			id=&quot;apple&quot; name=&quot;Apple&quot; /&gt; &lt;brand
+			id=&quot;canon&quot; name=&quot;Canon&quot; /&gt; &lt;brand
+			id=&quot;nikon&quot; name=&quot;Nikon&quot; /&gt; &lt;brand
+			id=&quot;sony&quot; name=&quot;Sony&quot; /&gt; &lt;brand
+			id=&quot;samsung&quot; name=&quot;Samsung&quot; /&gt; &lt;brand
+			id=&quot;olympus&quot; name=&quot;Olympus&quot; /&gt; &lt;brand
+			id=&quot;fujifilm&quot; name=&quot;Fujifilm&quot; /&gt; &lt;brand
+			id=&quot;panasonic&quot; name=&quot;Panasonic&quot; /&gt; &lt;brand
+			id=&quot;google&quot; name=&quot;Google&quot; /&gt; &lt;brand
+			id=&quot;ricoh&quot; name=&quot;Ricoh&quot; /&gt; &lt;brand
+			id=&quot;pentax&quot; name=&quot;Pentax&quot; /&gt; &lt;brand
+			id=&quot;leica&quot; name=&quot;Leica&quot; /&gt; &lt;brand
+			id=&quot;motorola&quot; name=&quot;Motorola&quot; /&gt; &lt;brand
+			id=&quot;kodak&quot; name=&quot;Kodak&quot; /&gt; &lt;brand
+			id=&quot;lg&quot; name=&quot;LG&quot; /&gt; &lt;brand
+			id=&quot;nokia&quot; name=&quot;Nokia&quot; /&gt; &lt;brand
+			id=&quot;gopro&quot; name=&quot;GoPro&quot; /&gt; &lt;brand
+			id=&quot;htc&quot; name=&quot;HTC&quot; /&gt; &lt;brand
+			id=&quot;sonyericsson&quot; name=&quot;Sony Ericsson&quot; /&gt;
+			&lt;brand id=&quot;blackberry&quot; name=&quot;BlackBerry&quot; /&gt;
+			&lt;brand id=&quot;casio&quot; name=&quot;Casio&quot; /&gt; &lt;brand
+			id=&quot;sigma&quot; name=&quot;Sigma&quot; /&gt; &lt;brand
+			id=&quot;minolta&quot; name=&quot;Konica Minolta&quot; /&gt;
+			&lt;brand id=&quot;hp&quot; name=&quot;HP&quot; /&gt; &lt;brand
+			id=&quot;phaseone&quot; name=&quot;Phase One&quot; /&gt; &lt;brand
+			id=&quot;nintendo&quot; name=&quot;Nintendo&quot; /&gt; &lt;brand
+			id=&quot;kyocera&quot; name=&quot;Kyocera&quot; /&gt; &lt;brand
+			id=&quot;benq&quot; name=&quot;BenQ&quot; /&gt; &lt;brand
+			id=&quot;palm&quot; name=&quot;Palm&quot; /&gt; &lt;brand
+			id=&quot;leaf&quot; name=&quot;Leaf&quot; /&gt; &lt;brand
+			id=&quot;toshiba&quot; name=&quot;Toshiba&quot; /&gt; &lt;brand
+			id=&quot;sanyo&quot; name=&quot;Sanyo&quot; /&gt; &lt;brand
+			id=&quot;vivitar&quot; name=&quot;Vivitar&quot; /&gt; &lt;brand
+			id=&quot;acer&quot; name=&quot;Acer&quot; /&gt; &lt;brand
+			id=&quot;concord&quot; name=&quot;Concord&quot; /&gt; &lt;brand
+			id=&quot;docomo&quot; name=&quot;DoCoMo&quot; /&gt; &lt;brand
+			id=&quot;jvc&quot; name=&quot;JVC&quot; /&gt; &lt;brand
+			id=&quot;kddi&quot; name=&quot;KDDI&quot; /&gt; &lt;brand
+			id=&quot;polaroid&quot; name=&quot;Polaroid&quot; /&gt; &lt;brand
+			id=&quot;epson&quot; name=&quot;Epson&quot; /&gt; &lt;brand
+			id=&quot;sharp&quot; name=&quot;Sharp&quot; /&gt; &lt;brand
+			id=&quot;helio&quot; name=&quot;Helio&quot; /&gt;&lt;/brands&gt; </x:FlickrResponse>
+	</s:Body>
+</s:Envelope>

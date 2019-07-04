@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class HowToGetWIndowSizeWithJavaScriptExecutor {
 	
 	/**
@@ -18,8 +20,8 @@ public class HowToGetWIndowSizeWithJavaScriptExecutor {
 	@Test(enabled = true)
 	public void testGetWindowSizeWithJavaScriptExecutor() throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", Constants.chromeDriverPath);
-		WebDriver driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver= new ChromeDriver();
 		js = (JavascriptExecutor) driver; //cast javascript execotor to webdriver instance object
 		//driver.get("http://www.google.com");
 		js.executeScript("window.location = 'https://letskodeit.teachable.com/pages/practice'"); //navigate to website

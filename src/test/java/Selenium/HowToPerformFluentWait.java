@@ -11,6 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class HowToPerformFluentWait {
 	/**
 	 * DONT GET confused and make it hard for your self to understand fluent wait
@@ -40,9 +42,8 @@ public class HowToPerformFluentWait {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.chrome.driver",
-				Constants.chromeDriverPath);
-		WebDriver driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver= new ChromeDriver();
 		driver.get("https://letskodeit.teachable.com/p/practice");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
