@@ -24,7 +24,7 @@ public class CreateTable {
 
 		String DATEtimeStamp = Lib.getcurrentdateyyMMddHHmm();
 
-		createResultsTable("DATEtimeStamp");
+		createResultsTable(DATEtimeStamp);
 
 	}
 
