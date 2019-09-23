@@ -15,10 +15,10 @@ public class Sorting {
 	
 	public static void main(String[] args) {
 		
-//		doBubbleSort();
+		doBubbleSort();
 //		String[] array = {"4","2","3","1"};
 //		sortArrayMethod(array);
-		sortingHashMap();
+//		sortingHashMap();
 		
 	}
 	
@@ -33,7 +33,7 @@ public class Sorting {
 		}
 		
 		
-		Arrays.sort(randomArray);
+		Arrays.sort(randomArray); //built in function for sorting
 		
 		System.out.println("\nafter sorting");
 		
@@ -49,7 +49,11 @@ public class Sorting {
 	        
 	    	int array[] = {10, 8, 12, 9, 6, 7, 1}; 
 	    	
-	        
+	        System.out.println("before sorting :");
+
+	    	for(int i = 0; i < array.length;i++) {
+	    		System.out.print(array[i]+",");
+	    	}
 	    	int temp; //temp storage object in order to swap values
 	      
 	    	for (int i = 0 ; i < array.length ; i++) { //get the size of the array and start at index 0.. i checks index 0

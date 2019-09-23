@@ -14,7 +14,7 @@ public class PalindromeNumber {
 	public static void isPalindromeNumber(int num) {
 
 		// num is the number variable to be checked for palindrome
-
+		//mathematical way of checking for palindromeString
 		
 		int r = 0;
 		int sum = 0;
@@ -35,7 +35,7 @@ public class PalindromeNumber {
 	}
 
 	public static void isPalindromeString(String string) {
-
+		//just reverse it and check..
 		String t;
 
 		t = string;

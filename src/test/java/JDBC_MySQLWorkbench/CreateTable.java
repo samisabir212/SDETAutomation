@@ -17,14 +17,13 @@ public class CreateTable {
 
 	static Connection conn;
 
-	static String url = "jdbc:mysql://localhost:3306/AutomationExecutionResults?serverTimezone="
+	static String url = "jdbc:mysql://localhost:3306/GoRestTestData?serverTimezone="
 			+ TimeZone.getDefault().getID();
 
 	public static void main(String[] args) {
 
-		String DATEtimeStamp = Lib.getcurrentdateyyMMddHHmm();
 
-		createResultsTable(DATEtimeStamp);
+		createResultsTable("Users");
 
 	}
 
@@ -34,11 +33,12 @@ public class CreateTable {
 
 			Connection con = getJDBCconnection();
 
-			PreparedStatement create = con.prepareStatement("CREATE TABLE " + tablename + "("+ "Date varchar(255), Environment varchar(255), Application varchar(255), AccountStatus varchar(255), "
-					+ "ServiceName varchar(255), TestName varchar(255), Status varchar(255))");
+			PreparedStatement create = con.prepareStatement("CREATE TABLE " + 
+			tablename + "("+"environment varchar(255),id INT NOT NULL AUTO_INCREMENT, first_name varchar(255), last_name varchar(255), gender varchar(255), "
+					+ "DOB DATE, email varchar(255), phone varchar(255), website varchar(255), address varchar(255),PRIMARY KEY ( id ))");
 
-			// Date Enviornment Application Account Status Service Name Test Name Status
 			create.executeUpdate();
+			
 		} catch (Exception e) {
 
 			System.out.println("Exception :" + e);

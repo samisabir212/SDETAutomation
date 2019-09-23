@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.TimeZone;
 
 import Lib.Lib;
@@ -13,7 +14,7 @@ public class InsertIntoTable {
 	
 	static Connection conn;
 	static Statement stmt = null;
-	static String url = "jdbc:mysql://localhost:3306/AutomationExecutionResults?serverTimezone="
+	static String url = "jdbc:mysql://localhost:3306/GoRestTestData?serverTimezone="
 			+ TimeZone.getDefault().getID();
 	
 	public static void main(String[] args) throws SQLException {
@@ -21,8 +22,43 @@ public class InsertIntoTable {
 		String timestamp= Lib.getcurrentdateyyMMddHHmm();
 		timestamp= "2019_05_20_1236";
 		
-		insertIntoResultsTable(timestamp,"'"+timestamp+"'","'SIT'", "'Parabank'", "'ACTIVE'", "'Login'", "'Successful'", "'Passed'");
+//		insertIntoResultsTable(timestamp,"'"+timestamp+"'","'SIT'", "'Parabank'", "'ACTIVE'", "'Login'", "'Successful'", "'Passed'");
 		
+		for(int i = 0; i<10;i++) {
+			String table = "Users";
+			
+			String environment = Lib.returnRandomEnvironment();
+			String id = Lib.generateRandomNumbers(4);
+			String first_name = Lib.generateRandomString(5);
+			String last_name = Lib.generateRandomString(6);
+			String gender = "male";
+			LocalDate DOB = Lib.generateRandomDate();
+			String email = Lib.generateRandomString(7);
+			email = email+"@gmail.com";
+			String phone = Lib.generateRandomNumbers(10);
+			String website = Lib.generateRandomString(6);
+			website = "http://www."+website+".com";
+			String address = Lib.generateRandomString(20);
+
+			try {
+				 conn = getJDBCconnection();
+				
+				stmt = conn.createStatement();		
+				
+				String sqlQuery = "INSERT INTO "+table+" (environment ,id, first_name, last_name, gender, DOB, email,phone, website, address)" 
+				+ "VALUES ('"+environment+"','"+id+"','"+first_name+"','"+last_name+"','"+gender+"','"+DOB+"','"+email+"','"+phone+"','"+website+"','"+address+"')";
+				 
+				stmt.executeUpdate(sqlQuery);
+			     
+			} catch (Exception e) {
+
+				System.out.println("Exception :" + e);
+
+			}			
+			
+		}
+	
+	
 	}
 	
 	public static void insertIntoResultsTable(String tableName,String date, String env,String app, String accountStatus,

@@ -6,6 +6,7 @@ public class HowDoYouPrint_2DeminsionalArray {
 
 	
 	public static void main(String[] args) {
+		
 		int[][] matrix3 = { { 1, 2, 3 }, { 4, 5, 6 } };
 		System.out.println(matrix3); //[[I@1d5a0305
 		System.out.println(Arrays.toString(matrix3));//[[I@6db3f829, [I@42698403]

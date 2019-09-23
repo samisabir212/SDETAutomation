@@ -225,6 +225,33 @@ while(itr.hasNext()){
 System.out.println(itr.next());  
 }  
 
+
+***********************
+
+
+HashMap
+HashMap doesn’t allow duplicate keys but allows duplicate values. That means A single key can’t contain more than 1 value but more than 1 key can contain a single value.
+HashMap allows null key also but only once and multiple null values.
+This class makes no guarantees as to the order of the map; in particular, it does not guarantee that the order will remain constant over time. It is roughly similar to HashTable but is unsynchronized.
+
+HashMap<String, Integer> map = new HashMap<>(); 
+          
+print(map); 
+map.put("vishal", 10); 
+map.put("sachin", 30); 
+map.put("vaibhav", 20);
+
+***********************
+
+TreeMap
+keeps natural order
+TreeMap can be a bit handy when we only need to store unique elements in a sorted order. Java.util.TreeMap uses a red-black tree in the background which makes sure that there are no duplicates; additionally it also maintains the elements in a sorted order.
+
+
+
+
+***********************
+
 SortedSet Interface
 SortedSet is the alternate of Set interface that provides a total ordering on its elements. The elements of the SortedSet are arranged in the increasing (ascending) order. The SortedSet provides the additional methods that inhibit the natural ordering of the elements.
 

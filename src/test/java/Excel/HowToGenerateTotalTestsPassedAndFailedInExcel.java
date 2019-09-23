@@ -31,6 +31,7 @@ import Constants.Constants;
 public class HowToGenerateTotalTestsPassedAndFailedInExcel extends Constants{
 	
 	static String excelFilePath = "../SDETautomation/ExcelPlay/Excel1.xlsx";
+	
 	public static void main(String[] args) throws IOException, EncryptedDocumentException, InvalidFormatException {
 		
 		
@@ -78,8 +79,9 @@ public class HowToGenerateTotalTestsPassedAndFailedInExcel extends Constants{
 		
 		System.out.println("total rows : " + sht.getLastRowNum());
 		
+		int testStatusColumn = 6;
 		for (int i = 0; i <= sht.getLastRowNum(); i++) {
-			String status = readexcelvalue_GetTotalcaseAmountResult(i, 6, path);
+			String status = readexcelvalue_GetTotalcaseAmountResult(i, testStatusColumn, path);
 			// System.out.println("iteration : " +i +" | Status = "+status);
 			if (status.equalsIgnoreCase("Passed")) {
 				Constants.passed++;

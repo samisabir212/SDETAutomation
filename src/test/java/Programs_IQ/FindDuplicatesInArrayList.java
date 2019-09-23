@@ -36,6 +36,8 @@ public class FindDuplicatesInArrayList {
 
 	public void countDups(List<String> list) {
 
+		
+		// this starts as an empty map
 		HashMap<String, Integer> sportsMap = new HashMap<String, Integer>();
 
 		for(int i = 0;i<list.size();i++) {
@@ -46,13 +48,13 @@ public class FindDuplicatesInArrayList {
 				
 			}else {
 				
-				sportsMap.put(list.get(i), 1);
+				sportsMap.put(list.get(i), 1);// this is your sports counter
 
 			}
 		}
 		
-		
-		
+	
+		//this is just to loop through the map
 		for(Entry<String, Integer> entry : sportsMap.entrySet()) {
 			
 			System.out.println(entry.getKey()+":"+entry.getValue());

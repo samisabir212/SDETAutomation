@@ -11,7 +11,7 @@ public class HowToCreateATextFile {
 
 	public static void main(String[] args) throws IOException {
 		
-		String path = "/Users/sami/Desktop/GitTechTekSolution/SDETautomation/FolderPlay/ThisIsALogFolder2019_06_13_1738/";
+		String path = "";
 		createTxtFile("sami", path,"file3");
 
 	}
@@ -27,4 +27,7 @@ public class HowToCreateATextFile {
 		bufferedWriter.close();
 		fileWriter.close();
 	}
+	
+	
+	
 }

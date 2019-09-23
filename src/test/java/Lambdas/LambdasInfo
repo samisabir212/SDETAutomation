@@ -1,0 +1,4 @@
+you can create these methods and dont need to call them with an object of a class
+in java 8 the need for some functionality to be associated with an object is no long necessary 
+this new freedom comes from what we call lamdas  
+lambdas lets us to create independent blocks of code that can be run on their own without being associated in  class 

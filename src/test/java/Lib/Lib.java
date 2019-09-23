@@ -16,7 +16,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -60,6 +62,8 @@ import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.microsoft.schemas.office.visio.x2012.main.CellType;
 
 import Constants.Constants;
@@ -73,6 +77,45 @@ public class Lib {
 	public static List<HashMap<String, String>> ldapMap = null;
 
 	
+	/**
+	 * this method is used to convert pojo to json string
+	 * @param obj
+	 * @return
+	 */
+	public static String getSerializedJson(Object obj) {
+		
+		String jsonString = null;
+		ObjectMapper mapper = new ObjectMapper();
+		try {
+			
+			jsonString = mapper.writeValueAsString(obj);
+			
+		}catch(JsonProcessingException e) {
+			e.printStackTrace();
+			//will return null
+			return jsonString;
+
+		}
+		
+		return jsonString;
+	}
+	
+	public static String returnRandomEnvironment() {
+		
+		List<String> environment = new ArrayList<String>();
+		
+		environment.add("DEV");
+		environment.add("FT");
+		environment.add("STAGE");
+		environment.add("SIT");
+		environment.add("PERF");
+		environment.add("PROD");
+
+		Collections.shuffle(environment);
+		
+		
+		return environment.get(3);
+	}
 	
 	
 	public static String returnxmlvalue(String xml, String key, int i)
@@ -103,7 +146,7 @@ public class Lib {
 	public static void generateRandomUsername() {
 		// ~~~~~ make username unique by appendning random string just for testing
 		// purposes so we wont get "User already created error message" ~~~~~
-		String randomString = Lib.generateRandomString();
+		String randomString = Lib.generateRandomString(8);
 		
 		Constants.RANDOMUSERNAME = Constants.USERNAME + randomString;
 
@@ -187,23 +230,56 @@ public class Lib {
 		Files.setPosixFilePermissions(file.toPath(), perms);
 	}
 
-	public static String generateRandomString() {
+	public static String generateRandomString(int totallength) {
 		String mychars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 		StringBuilder stringBuildr = new StringBuilder();
 		Random rnd = new Random();
-		while (stringBuildr.length() < 3) { // length of the random string.
+		while (stringBuildr.length() < totallength) { // length of the random string.
 			int index = (int) (rnd.nextFloat() * mychars.length());
 			stringBuildr.append(mychars.charAt(index));
 		}
 
 		String characters = stringBuildr.toString();
-		String string = "0";
+		String string = "";
 		StringBuilder stringBuilder = new StringBuilder(string);
 
 		String randomString = stringBuilder.append(characters).toString();
 
 		return randomString;
 
+	}
+	
+	public static String generateRandomNumbers(int lengthOfRandomNums) {
+		
+		String numbers = "1234567890";
+		StringBuilder stringBuildr = new StringBuilder();
+		Random rnd = new Random();
+		while (stringBuildr.length() < lengthOfRandomNums) { // length of the random string.
+			int index = (int) (rnd.nextFloat() * numbers.length());
+			stringBuildr.append(numbers.charAt(index));
+		}
+
+		String characters = stringBuildr.toString();
+		String string = "";
+		StringBuilder stringBuilder = new StringBuilder(string);
+
+		String randomNums = stringBuilder.append(characters).toString();
+
+		return randomNums;
+
+	}
+	
+	public static LocalDate generateRandomDate() {
+		
+		Random random = new Random();
+		int minDay = (int) LocalDate.of(1900, 1, 1).toEpochDay();
+		int maxDay = (int) LocalDate.of(2015, 1, 1).toEpochDay();
+		long randomDay = minDay + random.nextInt(maxDay - minDay);
+
+		LocalDate randomBirthDate = LocalDate.ofEpochDay(randomDay);
+
+		System.out.println(randomBirthDate);
+		return randomBirthDate;
 	}
 
 	public static String readexcelvalue_ParaBankTestData(int rownm, int colnm) throws IOException {

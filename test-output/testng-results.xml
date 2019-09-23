@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15852" started-at="2019-07-04T02:57:04Z" finished-at="2019-07-04T02:57:20Z">
+  <suite name="Default suite" duration-ms="31518" started-at="2019-08-30T10:44:35Z" finished-at="2019-08-30T10:45:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15852" started-at="2019-07-04T02:57:04Z" finished-at="2019-07-04T02:57:20Z">
-      <class name="HttpUrlConnection.Test_PostCall">
-        <test-method status="PASS" signature="testPostCall()[pri:0, instance:HttpUrlConnection.Test_PostCall@452ba1db]" name="testPostCall" duration-ms="15697" started-at="2019-07-03T22:57:04Z" finished-at="2019-07-03T22:57:20Z">
+    <test name="Default test" duration-ms="31518" started-at="2019-08-30T10:44:35Z" finished-at="2019-08-30T10:45:06Z">
+      <class name="com.qa.gorest.tests.GoRestApiTests">
+        <test-method status="PASS" signature="PostNewUser()[pri:0, instance:com.qa.gorest.tests.GoRestApiTests@76a36b71]" name="PostNewUser" duration-ms="16285" started-at="2019-08-30T06:44:50Z" finished-at="2019-08-30T06:45:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPostCall -->
-      </class> <!-- HttpUrlConnection.Test_PostCall -->
+        </test-method> <!-- PostNewUser -->
+      </class> <!-- com.qa.gorest.tests.GoRestApiTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

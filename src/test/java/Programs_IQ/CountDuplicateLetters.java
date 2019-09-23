@@ -42,7 +42,7 @@ public class CountDuplicateLetters {
 	               
 	           } else {
 	        	   
-	               charMap.put(value, 1);
+	               charMap.put(value, 1); //this is your ccounter.
 	           }
 	       }
 	    }
